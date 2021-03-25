@@ -91,7 +91,7 @@ class Tank(Vehicle):
 
     def shoot(self):
         if self.count_ammo <= 0:
-            print("Снаряды кончились")
+            print("Снаряды кончились :(")
         else:
             print("Танк выстрелил")
             self.count_ammo -= 1
@@ -101,6 +101,16 @@ print(f'{bcolors.HEADER}Tank:{bcolors.ENDC}')
 tank1 = Tank()
 tank1.start()
 tank1.move()
+tank1.shoot()
+tank1.shoot()
+tank1.shoot()
+tank1.shoot()
+tank1.shoot()
+tank1.shoot()
+tank1.shoot()
+tank1.shoot()
+tank1.shoot()
+tank1.shoot()
 tank1.shoot()
 
 
@@ -122,7 +132,7 @@ class Car(Vehicle):
             print("Машина поехала")
             self.fuel -= 10
         if self.fuel <= 0:
-            print("Машина заглохла")
+            print("Машина заглохла :(")
             self.working_engine = False
 
 
@@ -161,7 +171,7 @@ class Boat(Vehicle):
 
             if self.air_pressure <= 0:
                 self.working_engine = False
-                print("Лодка тонет и двигатель не заводится")
+                print("Лодка тонет и двигатель не заводится :(")
         else:
             print("Мотор лодки не заведен")
 
